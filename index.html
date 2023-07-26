@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vehicle cart</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="image">
+            <img src="https://imgcdn.oto.com.sg/large/gallery/color/2/24/honda-civic-color-905427.jpg " alt="" height="200px" width="400px" id="img">
+        </div>
+        <div id="details">
+            <h2>Honda Civic</h2>
+            <table>
+                <tr>
+                    <td>🚗</td>
+                    <td>Mileage:</td>
+                    <td>5000miles</td>
+                </tr>
+                <tr>
+                    <td>⛽</td>
+                    <td>Fuel:</td>
+                    <td>31mpg city/40mpg highway</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Safety:</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>Pick a color :</p>
+            <button id="blue" onclick="blue()"></button>
+            <button id="black" onclick="black()"></button>
+            <button id="grey" onclick="grey()"></button>
+            <button id="white" onclick="white()"></button>
+        </div>
+        <div class="cartsystem">
+            <button id="clk">Add to cart</button>
+        </div>
+    </div>
+
+
+    <script>
+        blue = () => document.getElementById("img").setAttribute("src", "https://imgcdn.oto.com.sg/large/gallery/color/2/24/honda-civic-color-230235.jpg")
+        black = () => document.getElementById("img").setAttribute("src", "https://imgcdn.oto.com.sg/large/gallery/color/2/24/honda-civic-color-145842.jpg")
+        grey = () => document.getElementById("img").setAttribute("src", "https://imgcdn.oto.com.sg/large/gallery/color/2/24/honda-civic-color-761194.jpg")
+        white = () => document.getElementById("img").setAttribute("src", "https://imgcdn.oto.com.sg/large/gallery/color/2/24/honda-civic-color-210620.jpg")
+        const clk1=document.querySelector("#clk");
+        clk1.addEventListener("click",function(){
+            clk1.textContent="Added to cart";
+            event.target.style.backgroundColor = 'black';
+            event.target.style.color = 'white';
+        }); 
+    </script>
+</body>
+</html>
